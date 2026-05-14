@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>인터랙티브 아트 캔버스</title>
 <style>
-    body {
+ html, body {
         margin: 0;
         padding: 0;
         overflow: hidden; /* 스크롤 방지 */
@@ -13,8 +13,15 @@
         touch-action: none; /* 모바일/태블릿 화면 확대 방지 */
         user-select: none;
         font-family: '맑은 고딕', sans-serif;
-        width: 40vw;
-        height: 40vh;
+        width: 100%;
+        height: 100%;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        touch-action: none; /* 두 손가락으로 화면 줌인/줌아웃 되는 것 방지 */
+        user-select: none; /* 텍스트가 드래그되는 현상 방지 */
+       -webkit-user-select: none; /* 사파리 전용: 텍스트 드래그 방지 */
+       -webkit-touch-callout: none; /* 화면을 꾹~ 누르고 있을 때 복사/저장 팝업 뜨는 것 차단 */
     }
 
     #instruction {
